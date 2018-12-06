@@ -1,10 +1,30 @@
-grid(columns, gap, justify_items, align_items)
+grid(first, second, gap, justify_items, align_items, justify_content = stretch)
   display: -ms-grid
   display: grid
-  grid-template-columns: repeat(columns, 1fr)
-  -ms-grid-columns: repeat(columns, 1fr)
+  grid-template-columns: first second
+  -ms-grid-columns: first second
   grid-gap: gap
   justify-items: justify_items
   -webkit-box-align: align_items
   -ms-flex-align: align_items
   align-items: align_items
+  -webkit-box-pack: justify_content
+  -ms-flex-pack: justify_content
+  justify-content: justify_content
+
+transform(x, y, rotate)
+  -webkit-transform: translateX(x) translateY(y) rotate(rotate)
+  -ms-transform: translateX(x) translateY(y) rotate(rotate)
+  transform: translateX(x) translateY(y) rotate(rotate)
+
+animation(time, time_delay)
+  -webkit-transition: all time ease
+  -o-transition: all time ease
+  transition: all time ease
+  -webkit-transition-delay: time_delay
+  -o-transition-delay: time_delay
+  transition-delay: time_delay
+
+box-shadow(x, y, blur, color)
+  -webkit-box-shadow: x y blur 0px color
+  box-shadow: x y blur 0px color

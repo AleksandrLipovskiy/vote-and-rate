@@ -7,15 +7,14 @@
  Fonts
  
 ============================*/
-@font-face {
-  font-family: "OpenSansCondensed";
-  src:  url(/fonts/OpenSansCondensed.eot);
-  src:  url(/fonts/OpenSansCondensed.eot?#iefix) format("embedded-opentype"),
-        url(/fonts/OpenSansCondensed.woff) format("woff"),
-        url(/fonts/OpenSansCondensed.woff2) format("woff2"),
-        url(/fonts/OpenSansCondensed.ttf) format("truetype");
-  font-style: normal;
-}
+@font-face
+  font-family OpenSansCondensed
+  font-style normal
+  src url(/fonts/OpenSansCondensed.eot)
+  src url(/fonts/OpenSansCondensed.eot?#iefix) format("embedded-opentype"),
+      url(/fonts/OpenSansCondensed.woff) format("woff"),
+      url(/fonts/OpenSansCondensed.woff2) format("woff2"),
+      url(/fonts/OpenSansCondensed.ttf) format("truetype")
 
 /*===========================
  
@@ -32,10 +31,321 @@ html, body
   overflow: hidden
 
 body
-  font-family: 'OpenSansCondensed', sans-serif
+  font-family: OpenSansCondensed, sans-serif
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
+  font-size: 1.125rem
+  line-height: 1.25rem
   color: $black
   background-color: $grey-900
-  overflow-y: scroll
 
+a
+  text-transform: uppercase
+  color: $blue-100
+  -webkit-text-decoration: underline solid $blue-100
+  text-decoration: underline solid $blue-100
+  animation(250ms, 0ms)
+  &:hover
+    color: $blue-300
+    -webkit-text-decoration: underline solid $blue-300
+    text-decoration: underline solid $blue-300
+
+.btn
+  display: inline-block
+  text-transform: uppercase
+  -webkit-text-decoration: none
+  text-decoration: none
+  padding: .5rem 1rem
+  font-size: 1.125rem
+  border-radius: 5px
+  animation(250ms, 0ms)
+  cursor: pointer
+  &.bg-navy
+    color: white
+    background-color: $blue-100
+    box-shadow(0, 1px, 4px, $blue-0)
+  &.bg-white
+    color: $blue-100
+    background-color: white
+    box-shadow(0, 1px, 4px, $blue-0)
+  &.bg-green
+    color: white
+    background-color: $green-100
+    box-shadow(0, 1px, 4px, $green-0)
+  &:hover
+    -webkit-text-decoration: none
+    text-decoration: none
+    &.bg-navy
+      box-shadow(0, 3px, 4px, $blue-0)
+    &.bg-white
+      box-shadow(0, 3px, 4px, $blue-0)
+    &.bg-green
+      box-shadow(0, 3px, 4px, $green-0)
+  &:active
+    &.bg-navy
+      box-shadow(0, 0, 4px, $blue-0)
+    &.bg-white
+      box-shadow(0, 0, 4px, $blue-0)
+    &.bg-green
+      box-shadow(0, 0, 4px, $green-0)
+
+/*===========================
+ 
+ Main content
+ 
+============================*/
+header
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 80px
+  background-color: white
+  z-index: 5000
+
+.header-block
+  position: relative
+  width: 100%
+  max-width: 1100px
+  height: 100%
+  margin: 0 auto
+  
+.logo
+  position: absolute
+  top: 15px
+  left: 0
+  width: 200px
+  height: 50px
+  a
+    display: block
+    width: 100%
+    height: 100%
+    color: $black
+    
+.logo-img
+  display: block
+  position: absolute
+  top: 0
+  left: 0
+  width: 50px
+  height: 50px
+  background: url("/images/vote-and-rate.svg")
+  background-size: cover
+  
+.logo-title
+  display: block
+  position: absolute
+  top: 5px
+  left: 65px
+  text-transform: uppercase
+  font-weight: bold
+  font-size: 2.05rem
+  line-height: 1.25rem
+
+.logo-subtitle
+  font-weight: 400
+  text-transform: none
+  font-size: .9rem
+  color: $grey-100
+
+.nav-trigger
+  position: absolute
+  top: 0
+  left: 260px
+  width: 85px
+  height: 100%
+  cursor: pointer
+
+.nav-trigger-icon
+  position: absolute
+  top: 50%
+  left: 0
+  width: 30px
+  height: 3px
+  background: $black
+  transform(0, -50%, 0)
+  &::before, &::after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 30px
+    height: inherit
+    background: inherit
+    animation(250ms, 0ms)
+  &::before
+    transform(0, -6px, 0)
+  &::after
+    transform(0, 6px, 0)
+
+.nav-is-open .nav-trigger-icon
+  left: 50%
+  width: 3px
+  &::before
+    transform(-50%, 0, -45deg)
+  &::after
+    transform(-50%, 0, 45deg)
+
+.nav-trigger-title
+  display: block
+  position:absolute
+  top: 50%
+  left: 45px
+  text-transform: uppercase
+  transform(0, -50%, 0)
+
+.lang-selectors
+  grid(auto, auto, 15px, start, center, start)
+  position: absolute
+  top: 0
+  left: 390px
+  height: 100%
+  a
+    text-transform: uppercase
+    color: $black
+    -webkit-text-decoration: underline solid $black
+    text-decoration: underline solid $black
+    &.en-en, &.ru-ru
+      font-weight: bold
+      -webkit-text-decoration: none
+      text-decoration: none
+
+.signup-in-links
+  grid(auto, auto, 15px, start, center, start)
+  position: absolute
+  top: 0;
+  right: 0;
+  height: 100%
+
+@media only screen and (max-width: 1100px)
+  .logo
+    left: 15px
+  .signup-in-links
+    right: 15px
+
+@media only screen and (max-width: 700px)
+  .signup-in-links
+    display: none
+  .lang-selectors
+    left: -webkit-calc(100% - 65px)
+    left: calc(100% - 65px)
+
+@media only screen and (max-width: 450px)
+  header
+    height: 60px
+  .logo
+    top: 10px
+    width: 175px
+    height: 40px
+  .logo-img
+    width: 40px
+    height: 40px
+  .logo-title
+    top: 7px
+    left: 50px
+    font-size: 1.9rem
+    line-height: .9rem
+  .logo-subtitle
+    font-size: .84rem
+  .nav-trigger
+    left: 220px
+
+@media only screen and (max-width: 400px)
+  .nav-trigger
+    width: 30px
+  .nav-trigger-title
+    display: none
+
+@media only screen and (max-width: 340px)
+  .nav-trigger
+    left: 205px
+
+/*========================
+  Main
+=========================*/
+main
+  position: relative
+  width: 100%
+  max-width: 1100px
+  height: auto
+  margin: 0 auto
+  padding: 95px 0 15px 0
+
+@media only screen and (max-width: 1100px)
+  main
+    padding: 95px 15px 15px 15px
+  
+section.main-content
+  position: relative
+  grid(50%, 50%, 15px, start, start)
+  width: 100%
+  height: auto
+  min-height: -webkit-calc(100vh - 110px)
+  min-height: calc(100vh - 110px)
+  
+.site-block
+  position: relative
+  width: 100%
+  height: 100%
+  //border: 1px solid black
+  
+.landing-title
+  position: relative
+  width: 100%
+  h1
+    text-transform: uppercase
+    font-weight: bold
+    font-size: 2.05rem
+    line-height: 2.5rem
+    &::after
+      content: ""
+      position: absolute
+      bottom: -20px
+      left: 0
+      width: 30px
+      height: 15px
+      background-color: $blue-100
+
+.landing-subtitle
+  margin-top: 35px
+
+.watch-video-about
+  position: relative
+  grid(auto, 40px, 15px, start, center, start)
+  margin-top: 30px
+  color: $blue-300
+  font-size: 1rem
+  cursor: pointer
+
+.watch-video-about-icon
+  position: relative
+  width: 5px
+  height: 40px
+  background-color: $blue-300
+  &::before, &::after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 5px
+    height: 40px
+    background-color: inherit
+  &::before
+    transform(16px, -9px, -60deg)
+  &::after
+    transform(16px, 9px, 60deg)
+
+.landing-btns
+  position: absolute
+  bottom: 0
+  left: 0
+  width: 100%
+
+.find-and-join-vote
+  position: absolute
+  bottom: 0
+  right: 0
+
+@media only screen and (max-width: 1100px)
+  .find-and-join-vote
+    right: 15px
