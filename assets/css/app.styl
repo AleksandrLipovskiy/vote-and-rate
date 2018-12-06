@@ -1,0 +1,41 @@
+@import "resets"
+@import "colors"
+@import "mixins"
+
+/*===========================
+
+ Fonts
+ 
+============================*/
+@font-face {
+  font-family: "OpenSansCondensed";
+  src:  url(/fonts/OpenSansCondensed.eot);
+  src:  url(/fonts/OpenSansCondensed.eot?#iefix) format("embedded-opentype"),
+        url(/fonts/OpenSansCondensed.woff) format("woff"),
+        url(/fonts/OpenSansCondensed.woff2) format("woff2"),
+        url(/fonts/OpenSansCondensed.ttf) format("truetype");
+  font-style: normal;
+}
+
+/*===========================
+ 
+ Primary
+ 
+============================*/
+*, *::after, *::before
+  box-sizing: border-box
+
+html, body
+  width: 100%
+  height: 100%
+  font-size: 100%
+  overflow: hidden
+
+body
+  font-family: 'OpenSansCondensed', sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  color: $black
+  background-color: $grey-900
+  overflow-y: scroll
+
