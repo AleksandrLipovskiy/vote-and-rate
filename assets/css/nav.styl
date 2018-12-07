@@ -1,0 +1,73 @@
+nav
+	position: absolute
+	top: 0
+	left: 0
+	width: 50%
+	height: 100%
+	background-color: white
+	border-right: 1px solid $grey-900
+	z-index: 4000
+	animation(250ms, 0ms)
+	transform(-100%, 0, 0)
+
+.nav-is-open nav
+	transform(0, 0, 0)
+
+.nav-block
+	position: absolute
+	top: 75px
+	right: 15px;
+	width: 100%
+	max-width: 535px
+	height: -webkit-calc(100% - 90px)
+	height: calc(100% - 90px)
+	ul
+		margin-bottom: 30px
+		li
+			padding-bottom: 15px
+
+.search-form
+	grid(auto, 73px, 15px, end, center)
+	width: 100%
+	input
+		width: 100%
+		padding: .5rem 1rem
+	div
+		width: auto
+
+.input-bottom-placeholder
+	width: 100%
+	margin: 3px 0 0 16px
+	font-size: .8rem
+	color: $grey-100
+
+.nav-separator
+	margin: 30px 0
+	width: 30px
+	height: 15px
+	background-color: $blue-100
+
+.contact
+	position: absolute
+	bottom: 0
+	left: 0
+	width: 100%
+
+.donate-link
+	width: 100%
+	margin-bottom: 15px
+
+.development
+	color: $grey-100
+	font-size: .8rem
+
+@media only screen and (max-width: 1100px)
+	.nav-block
+		left: 15px
+		width: -webkit-calc(100% - 30px)
+		width: calc(100% - 30px)
+
+@media only screen and (max-width: 800px)
+	nav
+		width: 100%
+		border-right: none

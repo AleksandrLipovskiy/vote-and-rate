@@ -1,0 +1,29 @@
+<nav>
+	<div class="nav-block">
+		<div class="search-form">
+			<input type="text" name="seacrh-value" placeholder="voting titles or keywords" />
+			<div class="btn bg-white">search</div>
+		</div>
+		<div class="input-bottom-placeholder">voting titles or keywords</div>
+
+		<div class="nav-separator"></div>
+
+		<ul>
+			<li><a href="#">sign up</a></li>
+			<li><a href="#">sign in</a></li>
+		</ul>
+
+		<ul>
+			<li><a href="#">votes</a></li>
+			<li><a href="#">newly created</a></li>
+			<li><a href="#">most active</a></li>
+		</ul>
+
+		<div class="contact">
+			<div class="donate-link">
+				It's free and you can make a <a href="#">donation</a> for its work and development.
+			</div>
+			<div class="development">developed and maintained <a href="https://lipovskiy.com">lipovskiy lab</a></div>
+		</div>
+	</div>
+</nav>

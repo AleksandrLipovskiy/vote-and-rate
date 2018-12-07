@@ -1,0 +1,60 @@
+.landing-title
+  position: relative
+  width: 100%
+  h1
+    text-transform: uppercase
+    font-weight: bold
+    font-size: 2.05rem
+    line-height: 2.5rem
+    &::after
+      content: ""
+      position: absolute
+      bottom: -20px
+      left: 0
+      width: 30px
+      height: 15px
+      background-color: $blue-100
+
+.landing-subtitle
+  margin-top: 35px
+
+.watch-video-about
+  position: relative
+  grid(auto, 40px, 15px, start, center, start)
+  margin-top: 30px
+  color: $blue-300
+  font-size: 1rem
+  cursor: pointer
+
+.watch-video-about-icon
+  position: relative
+  width: 5px
+  height: 40px
+  background-color: $blue-300
+  &::before, &::after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 5px
+    height: 40px
+    background-color: inherit
+  &::before
+    transform(16px, -9px, -60deg)
+  &::after
+    transform(16px, 9px, 60deg)
+
+.landing-btns
+  position: absolute
+  bottom: 0
+  left: 0
+  width: 100%
+
+.find-and-join-vote
+  position: absolute
+  bottom: 0
+  right: 0
+
+@media only screen and (max-width: 1100px)
+  .find-and-join-vote
+    right: 15px

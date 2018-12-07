@@ -1,3 +1,4 @@
+"use strict";
 // We need to import the CSS so that webpack will load it.
 // The MiniCssExtractPlugin is used to separate it out into
 // its own CSS file.
@@ -15,3 +16,13 @@ import "phoenix_html"
 //
 // Local files can be imported directly using relative paths, for example:
 // import socket from "./socket"
+
+import dom from "./dom"
+import nav from "./nav"
+
+window.onload = function() {
+
+	dom.navTrigger.onclick = function() {
+		nav.clickTrigger(dom.body)
+	}
+}
