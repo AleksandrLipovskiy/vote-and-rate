@@ -4,16 +4,11 @@
 		<div class="logo">
 			<a href="<%= Routes.page_path(@conn, :index) %>">
 				<span class="logo-img"></span>
-				<span class="logo-title">
-					vote & rate<br />
-					<span class="logo-subtitle">voting, rating and discussion</span>
-				</span>
 			</a>
 		</div>
 
 		<div class="nav-trigger">
 			<div class="nav-trigger-icon"></div>
-			<div class="nav-trigger-title">menu</div>
 		</div>
 
 		<div class="lang-selectors">
