@@ -1,5 +1,9 @@
 <div class="site-block">
-	<canvas></canvas>
+	<div class="laptop"></div>
+	<div class="watch-video-about">
+		<div class="watch-video-about-icon"></div>
+		<div class="watch-video-about-text">watch features</div>
+	</div>
 </div>
 
 <div class="site-block">
@@ -13,14 +17,9 @@
 		Create votes, invite to vote, participate in voting, discuss voting with other participants and share the results
 	</div>
 
-	<div class="watch-video-about">
-		<div class="watch-video-about-text">watch video about<br />"vote and rate"</div>
-		<div class="watch-video-about-icon"></div>
-	</div>
-
 	<div class="landing-btns">
 		<a href="#" class="btn bg-navy">create vote</a>
 
-		<a href="#" class="find-and-join-vote">find and join vote</a>
+		<a href="#" class="btn bg-white">find vote</a>
 	</div>
 </div>

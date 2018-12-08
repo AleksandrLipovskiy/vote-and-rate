@@ -1,8 +1,6 @@
-grid(first, second, gap, justify_items, align_items, justify_content = stretch)
+grid(first, second, gap, justify_items, align_items, justify_content = stretch, columns = true)
   display: -ms-grid
   display: grid
-  grid-template-columns: first second
-  -ms-grid-columns: first second
   grid-gap: gap
   justify-items: justify_items
   -webkit-box-align: align_items
@@ -11,6 +9,19 @@ grid(first, second, gap, justify_items, align_items, justify_content = stretch)
   -webkit-box-pack: justify_content
   -ms-flex-pack: justify_content
   justify-content: justify_content
+  
+  if columns
+    grid-template-columns: first second
+    -ms-grid-columns: first second
+    -ms-grid-rows: 1fr
+    grid-template-rows: 1fr
+  else
+    grid-template-columns: 1fr
+    -ms-grid-columns: 1fr
+    -ms-grid-rows: first second
+    grid-template-rows: first second
+    -ms-flex-line-pack: justify_content
+    align-content: justify_content
 
 transform(x, y, rotate)
   -webkit-transform: translateX(x) translateY(y) rotate(rotate)

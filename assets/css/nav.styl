@@ -7,6 +7,7 @@ nav
 	background-color: white
 	border-right: 1px solid $grey-900
 	z-index: 4000
+	will-change: transform
 	animation(250ms, 0ms)
 	transform(-100%, 0, 0)
 
@@ -25,6 +26,8 @@ nav
 		margin-bottom: 30px
 		li
 			padding-bottom: 15px
+			a
+				text-decoration: none
 
 .search-form
 	grid(auto, 73px, 15px, end, center)
@@ -71,3 +74,12 @@ nav
 	nav
 		width: 100%
 		border-right: none
+	.nav-block
+		max-width: -webkit-calc(100% - 30px)
+		max-width: calc(100% - 30px)
+
+@media only screen and (max-width: 800px)
+	.nav-block
+		top: 60px
+		height: -webkit-calc(100% - 70px)
+		height: calc(100% - 70px)
