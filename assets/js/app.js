@@ -11,6 +11,7 @@ import css from "../css/app.styl"
 // Import dependencies
 //
 import "phoenix_html"
+import "@babel/polyfill"
 
 // Import local files
 //
@@ -19,8 +20,14 @@ import "phoenix_html"
 
 import dom from "./dom"
 import nav from "./nav"
+import Laptop from "./laptop.js"
 
 window.onload = function() {
+	
+	if (dom.laptopScreen) {
+		const laptop = new Laptop(dom.laptopScreen)
+		laptop.animation()
+	}
 
 	dom.navTrigger.onclick = function() {
 		nav.clickTrigger(dom.body)

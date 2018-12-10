@@ -38,18 +38,18 @@ body
   -moz-osx-font-smoothing: grayscale
   line-height: 1.125rem
   color: $black
-  background-color: $grey-900
+  background-color: $grey-light
 
 a
   text-transform: uppercase
-  color: $blue-100
-  -webkit-text-decoration: underline solid $blue-100
-  text-decoration: underline solid $blue-100
+  color: $navy
+  -webkit-text-decoration: underline solid $navy
+  text-decoration: underline solid $navy
   animation(250ms, 0ms)
   &:hover
-    color: $blue-300
-    -webkit-text-decoration: underline solid $blue-300
-    text-decoration: underline solid $blue-300
+    color: $blue
+    -webkit-text-decoration: underline solid $blue
+    text-decoration: underline solid $blue
 
 .btn
   display: inline-block
@@ -62,40 +62,40 @@ a
   cursor: pointer
   &.bg-navy
     color: white
-    background-color: $blue-100
-    box-shadow(0, 1px, 4px, $blue-0)
+    background-color: $navy
+    box-shadow(0, 1px, 4px, $navy-dark)
   &.bg-blue
     color: white
-    background-color: $blue-300
-    box-shadow(0, 1px, 4px, $blue-100)
+    background-color: $blue
+    box-shadow(0, 1px, 4px, $navy)
   &.bg-white
-    color: $blue-100
+    color: $navy
     background-color: white
-    box-shadow(0, 1px, 4px, $blue-0)
+    box-shadow(0, 1px, 4px, $navy-dark)
   &.bg-green
     color: white
-    background-color: $green-100
-    box-shadow(0, 1px, 4px, $green-0)
+    background-color: $green
+    box-shadow(0, 1px, 4px, $green-dark)
   &:hover
     -webkit-text-decoration: none
     text-decoration: none
     &.bg-navy
-      box-shadow(0, 3px, 4px, $blue-0)
+      box-shadow(0, 3px, 4px, $navy-dark)
     &.bg-blue
-      box-shadow(0, 3px, 4px, $blue-100)
+      box-shadow(0, 3px, 4px, $navy)
     &.bg-white
-      box-shadow(0, 3px, 4px, $blue-0)
+      box-shadow(0, 3px, 4px, $navy-dark)
     &.bg-green
-      box-shadow(0, 3px, 4px, $green-0)
+      box-shadow(0, 3px, 4px, $green-dark)
   &:active
     &.bg-navy
-      box-shadow(0, 0, 4px, $blue-0)
+      box-shadow(0, 0, 4px, $navy-dark)
     &.bg-blue
-      box-shadow(0, 0, 4px, $blue-100)
+      box-shadow(0, 0, 4px, $navy)
     &.bg-white
-      box-shadow(0, 0, 4px, $blue-0)
+      box-shadow(0, 0, 4px, $navy-dark)
     &.bg-green
-      box-shadow(0, 0, 4px, $green-0)
+      box-shadow(0, 0, 4px, $green-dark)
 
 /*===========================
  
@@ -242,19 +242,19 @@ main
   max-width: 1100px
   height: auto
   margin: 0 auto
-  padding: 95px 0 15px 0
+  padding: 75px 0 15px 0
 
 @media only screen and (max-width: 1100px)
   main
-    padding: 95px 15px 15px 15px
+    padding: 75px 15px 15px 15px
   
 section.main-content
   position: relative
   grid(1fr, 1fr, 15px, start, start)
   width: 100%
   height: auto
-  min-height: -webkit-calc(100vh - 110px)
-  min-height: calc(100vh - 110px)
+  min-height: -webkit-calc(100vh - 90px)
+  min-height: calc(100vh - 90px)
   
 .site-block
   position: relative
@@ -263,8 +263,6 @@ section.main-content
   //border: 1px solid black
 
 @media only screen and (max-width: 800px)
-  main
-    padding: 75px 15px 15px 15px
   section.main-content
     grid(auto, 210px, 15px, start, start, stretch, false)
 

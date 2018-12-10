@@ -4,15 +4,211 @@
   left: 0
   width: 100%
   height: 100%
-  background: url("/images/lap.png") left top no-repeat
-  background-size: auto 100%
+  background: url("/images/laptop.svg") left top no-repeat
+  background-size: 100% auto
+  preserve3d()
+
+#laptop-screen
+  position: absolute
+  top: 12px
+  left: 12px
+  overflow: hidden
+  
+$time_animation = 500ms
+  
+.laptop-screen-vote
+  position: absolute
+  top: 15%
+  left: 10%
+  width 35%
+  height: 70%
+  background-color: white
+  animation($time_animation, 0)
+  transform-with-scale(0, 0, 0)
+.laptop-screen-vote-img
+  width: 100%
+  height: 100%
+  background: url("/images/vote-in-laptop-scree.svg") center no-repeat
+  background-size: cover
+
+.laptop-screen-diagramm
+  position: absolute
+  top: 15%
+  right: 10%
+  width 35%
+  height: 70%
+  overflow: hidden
+  animation($time_animation, 0)
+  transform(0, 0, 0)
+.laptop-screen-diagramm-bar
+  position: absolute
+  bottom: 0
+  width: 18%
+  animation($time_animation, 0)
+  transform(0, 110%, 0)
+  &.superman
+    left: 1%
+    height: 22%
+    background-color: $orange
+  &.betman
+    left: 21%
+    height: 18%
+    background-color: $lime-dark
+  &.spiderman
+    left: 41%
+    height: 10%
+    background-color: $blue
+  &.wolverine
+    left: 61%
+    height: 6%
+    background-color:$indigo
+  &.wonder-woman
+    left: 81%
+    height: 44%
+    background-color: $pink
+  .diagramm-bar-num
+    display: block
+    position: absolute
+    width: 100%
+    bottom: 100%
+    left: 0
+    text-align: center
+    font-size: .5rem
+    animation($time_animation, 0)
+    transform-with-scale(0, 0, 0)
+
+.laptop-screen-chat
+  position: absolute
+  top: 15%
+  right: 10%
+  width 35%
+  height: 70%
+  background-color: white
+  animation($time_animation, 0)
+  transform(0, 150%, 0)
+.laptop-screen-chat-dialog
+  position: absolute
+  width: 80%
+  height: 2rem
+  padding: 2%
+  font-size: .4rem
+  line-height: .45rem
+  .logo-dialoger
+    position: absolute
+    top: 6%
+    left: 6%
+    width: .5rem
+    height: .5rem
+    border-radius: 50%
+  .name-dialoger
+    position: absolute
+    top: 0.1rem
+    left: 1rem
+  .text-dialoger
+    position: absolute
+    width: 100%
+    top: 0.8rem
+    left: 6%
+  &.first
+    top: 2%
+    left: 2%
+    animation($time_animation, 500ms)
+    transform-with-scale(0, 0, 0)
+    .logo-dialoger
+      background-color: $orange
+  &.second
+    top: 48%
+    left: 2%
+    animation($time_animation, 1000ms)
+    transform-with-scale(0, 0, 0)
+    .logo-dialoger
+      background-color: $blue
+  &.last
+    top: 64%
+    right: 2%
+    animation($time_animation, 1500ms)
+    transform-with-scale(0, 0, 0)
+    .text-dialoger
+      text-align: right
+      padding-right: .5rem
+
+.laptop-screen-logo,
+.cansel-animation-screen
+  position: absolute
+  top: 15%
+  left: 10%
+  width: 80%
+  height: 70%
+  animation($time_animation, 250ms)
+
+.laptop-screen-logo
+  background: url("/images/vote-and-rate.svg") center center no-repeat
+  background-size: 50% 50%
+  transform-with-scale(0, 0, 0)
+  
+.cansel-animation-screen
+  transform(150%, 0, 0)
+  .cansel-animation-screen-text
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    margin: auto
+    height: 50%
+    text-transform: uppercase
+    font-weight: bold
+    font-size: 1rem
+    line-height: 1.2rem
+    
+
+.animation-step-one .laptop-screen-vote
+  display: block
+  transform-with-scale(0, 0, 1)
+  
+.animation-step-two .laptop-screen-diagramm-bar
+  display: block
+  transform(0, 0, 0)
+.animation-step-two .diagramm-bar-num
+  transform-with-scale(0, 0, 1)
+
+.animation-step-three .laptop-screen-diagramm
+  transform(0, -150%, 0)
+.animation-step-three .laptop-screen-chat
+  display: block
+  transform(0, 0, 0)
+.animation-step-three .laptop-screen-chat-dialog
+  &.first
+    transform-with-scale(0, 0, 1)
+  &.second
+    transform-with-scale(0, 0, 1)
+  &.last
+    transform-with-scale(0, 0, 1)
+
+.animation-step-four .laptop-screen-vote
+  transform-with-scale(-150%, 0, 1)
+.animation-step-four .laptop-screen-chat
+  transform(-300%, 0, 0)
+.animation-step-four .laptop-screen-logo
+  transform-with-scale(0, 0, 1)
+
+.animation-step-five .laptop-screen-vote
+  display: none
+.animation-step-five .laptop-screen-diagramm-bar
+  display: none
+.animation-step-five .laptop-screen-chat
+  display: none
+
+.animation-step-six .laptop-screen-logo
+  transform-with-scale(-25%, 0, 1)
+.animation-step-six .cansel-animation-screen
+  transform(50%, 0, 0)
 
 .watch-video-about
   position: absolute
   bottom: 0
   left: 0
   grid(auto, auto, 15px, start, center, start)
-  color: $blue-100
+  color: $navy
   font-size: 1rem
   cursor: pointer
   text-transform: uppercase
@@ -39,7 +235,7 @@
       left: 0
       width: 30px
       height: 15px
-      background-color: $blue-100
+      background-color: $navy
 
 .landing-subtitle
   margin-top: 65px
@@ -68,3 +264,14 @@
         bottom: -25px
   .landing-subtitle
     margin-top: 40px
+
+@media only screen and (max-width: 350px)
+  .cansel-animation-screen
+    .cansel-animation-screen-text
+      height: 60%
+      font-size: .9rem
+      line-height: 1.1rem
+
+@media only screen and (max-height: 550px)
+  .laptop
+    max-width: 425px

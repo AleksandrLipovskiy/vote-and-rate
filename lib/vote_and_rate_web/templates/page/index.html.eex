@@ -1,5 +1,52 @@
 <div class="site-block">
-	<div class="laptop"></div>
+	<div class="laptop">
+		<div id="laptop-screen">
+			<div class="laptop-screen-vote">
+				<div class="laptop-screen-vote-img"></div>
+			</div>
+			<div class="laptop-screen-diagramm">
+				<div class="laptop-screen-diagramm-bar superman">
+					<span class="diagramm-bar-num">22%</span>
+				</div>
+				<div class="laptop-screen-diagramm-bar betman">
+					<span class="diagramm-bar-num">18%</span>
+				</div>
+				<div class="laptop-screen-diagramm-bar spiderman">
+					<span class="diagramm-bar-num">10%</span>
+				</div>
+				<div class="laptop-screen-diagramm-bar wolverine">
+					<span class="diagramm-bar-num">6%</span>
+				</div>
+				<div class="laptop-screen-diagramm-bar wonder-woman">
+					<span class="diagramm-bar-num">44%</span>
+				</div>
+			</div>
+			<div class="laptop-screen-chat">
+				<div class="laptop-screen-chat-dialog first">
+					<div class="logo-dialoger"></div>
+					<div class="name-dialoger">Stan Marsh</div>
+					<div class="text-dialoger">I think all superheroes are cool but the coolest in general is Darth Vader.</div>
+				</div>
+				<div class="laptop-screen-chat-dialog second">
+					<div class="logo-dialoger"></div>
+					<div class="name-dialoger">Kenny</div>
+					<div class="text-dialoger">I like a rocket man.</div>
+				</div>
+				<div class="laptop-screen-chat-dialog last">
+					<div class="text-dialoger">yes they are all cool</div>
+				</div>
+			</div>
+			<div class="laptop-screen-logo"></div>
+			<div class="cansel-animation-screen">
+				<div class="cansel-animation-screen-text">
+					vote<br />
+					rate<br />
+					discuss
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<div class="watch-video-about">
 		<div class="watch-video-about-icon"></div>
 		<div class="watch-video-about-text">watch features</div>

@@ -28,6 +28,20 @@ transform(x, y, rotate)
   -ms-transform: translateX(x) translateY(y) rotate(rotate)
   transform: translateX(x) translateY(y) rotate(rotate)
 
+transform-with-scale(x, y, scale)
+  -webkit-transform: translateX(x) translateY(y) scale(scale)
+  -ms-transform: translateX(x) translateY(y) scale(scale)
+  transform: translateX(x) translateY(y) scale(scale)
+
+preserve3d()
+  -webkit-transform-style: preserve-3d
+  transform-style: preserve-3d
+
+translate3d(posX, posY, posZ)
+  -webkit-transform: translate3d(posX, posY, posZ)
+  -ms-transform: translate3d(posX, posY, posZ)
+  transform: translate3d(posX, posY, posZ)
+
 animation(time, time_delay)
   -webkit-transition: all time ease
   -o-transition: all time ease
