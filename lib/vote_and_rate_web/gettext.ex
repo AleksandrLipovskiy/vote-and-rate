@@ -21,4 +21,8 @@ defmodule VoteAndRateWeb.Gettext do
   See the [Gettext Docs](https://hexdocs.pm/gettext) for detailed usage.
   """
   use Gettext, otp_app: :vote_and_rate
+
+  def supported_locales do
+    Gettext.known_locales(VoteAndRateWeb.Gettext)
+  end
 end

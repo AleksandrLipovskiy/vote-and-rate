@@ -1,0 +1,97 @@
+## `msgid`s in this file come from POT (.pot) files.
+##
+## Do not add, change, or remove `msgid`s manually here as
+## they're tied to the ones in the corresponding POT file
+## (with the same domain).
+##
+## Use `mix gettext.extract --merge` or `mix gettext.merge`
+## to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: en\n"
+"Plural-Forms: nplurals=2\n"
+
+#, elixir-format
+#: lib/vote_and_rate_web/templates/page/index.html.eex:76
+msgid "create vote"
+msgstr "create vote"
+
+#, elixir-format
+#: lib/vote_and_rate_web/templates/layout/nav.html.eex:29
+msgid "developed and maintained"
+msgstr "developed and maintained"
+
+#, elixir-format
+#: lib/vote_and_rate_web/templates/layout/nav.html.eex:24
+msgid "donation description"
+msgstr "It's free and you can make a donation for its work and development"
+
+#, elixir-format
+#: lib/vote_and_rate_web/templates/page/index.html.eex:78
+msgid "find vote"
+msgstr "find vote"
+
+#, elixir-format
+#: lib/vote_and_rate_web/templates/layout/app.html.eex:13
+#: lib/vote_and_rate_web/templates/page/index.html.eex:72
+msgid "main subtitle"
+msgstr "Create votes, invite to vote, participate in voting, discuss voting with other participants and share the results"
+
+#, elixir-format
+#: lib/vote_and_rate_web/templates/layout/app.html.eex:12
+#: lib/vote_and_rate_web/templates/page/index.html.eex:67
+msgid "main title"
+msgstr "Free platform for online voting, rating and discussion"
+
+#, elixir-format
+#: lib/vote_and_rate_web/templates/layout/app.html.eex:7
+msgid "meta description"
+msgstr "Free platform for online voting, rating and discussion with the ability to share results"
+
+#, elixir-format
+#: lib/vote_and_rate_web/templates/layout/nav.html.eex:19
+msgid "most active"
+msgstr "most active"
+
+#, elixir-format
+#: lib/vote_and_rate_web/templates/layout/nav.html.eex:18
+msgid "newly created"
+msgstr "newly created"
+
+#, elixir-format
+#: lib/vote_and_rate_web/templates/layout/header.html.eex:20
+#: lib/vote_and_rate_web/templates/layout/nav.html.eex:13
+msgid "sign in"
+msgstr "sign in"
+
+#, elixir-format
+#: lib/vote_and_rate_web/templates/layout/header.html.eex:21
+#: lib/vote_and_rate_web/templates/layout/nav.html.eex:12
+msgid "sign up"
+msgstr "sign up"
+
+#, elixir-format
+#: lib/vote_and_rate_web/templates/layout/nav.html.eex:17
+msgid "votes"
+msgstr "all votes"
+
+#, elixir-format
+#: lib/vote_and_rate_web/templates/layout/nav.html.eex:4
+#: lib/vote_and_rate_web/templates/layout/nav.html.eex:7
+msgid "voting titles or keywords"
+msgstr "voting titles or keywords"
+
+#, elixir-format
+#: lib/vote_and_rate_web/templates/page/index.html.eex:60
+msgid "watch features"
+msgstr "watch features"
+
+#, elixir-format
+#: lib/vote_and_rate_web/templates/layout/nav.html.eex:25
+msgid "donation"
+msgstr "donation"
+
+#, elixir-format
+#: lib/vote_and_rate_web/templates/layout/nav.html.eex:5
+msgid "search"
+msgstr "search"

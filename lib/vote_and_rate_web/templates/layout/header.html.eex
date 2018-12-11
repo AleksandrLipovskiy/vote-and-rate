@@ -12,13 +12,13 @@
 		</div>
 
 		<div class="lang-selectors">
-			<a href="#" class="en-en">en</a>
-			<a href="#" class="ru-en">ru</a>
+			<a href="<%= link_selector_lang(@conn, "en") %>" class="en-<%= locale() %>">en</a>
+			<a href="<%= link_selector_lang(@conn, "ru") %>" class="ru-<%= locale() %>">ru</a>
 		</div>
 
 		<div class="signup-in-links">
-			<a href="#" class="btn bg-white">sign in</a>
-			<a href="#" class="btn bg-green">sign up</a>
+			<a href="#" class="btn bg-white"><%= gettext("sign in") %></a>
+			<a href="#" class="btn bg-green"><%= gettext("sign up") %></a>
 		</div>
 	</div>
 </header>

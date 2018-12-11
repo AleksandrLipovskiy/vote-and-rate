@@ -2,7 +2,7 @@ defmodule VoteAndRateWeb.PageControllerTest do
   use VoteAndRateWeb.ConnCase
 
   test "GET /", %{conn: conn} do
-    conn = get(conn, "/")
-    assert html_response(conn, 200) =~ "Welcome to Phoenix!"
+    conn = get(conn, "/en")
+    assert html_response(conn, 200) =~ "Free platform for online voting, rating and discussion"
   end
 end

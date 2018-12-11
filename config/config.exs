@@ -10,6 +10,8 @@ use Mix.Config
 config :vote_and_rate,
   ecto_repos: [VoteAndRate.Repo]
 
+config :vote_and_rate, VoteAndRate.Gettext, default_locale: "en", locales: ~w(en ru)
+
 # Configures the endpoint
 config :vote_and_rate, VoteAndRateWeb.Endpoint,
   url: [host: "localhost"],

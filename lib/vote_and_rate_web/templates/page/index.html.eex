@@ -57,24 +57,26 @@
 
 	<div class="watch-video-about">
 		<div class="watch-video-about-icon"></div>
-		<div class="watch-video-about-text">watch features</div>
+		<div class="watch-video-about-text"><%= gettext("watch features") %></div>
 	</div>
 </div>
 
 <div class="site-block">
-	<div class="landing-title">
-		<h1>
-			Free platform for online voting, rating and discussion
-		</h1>
-	</div>
+  <div class="landings">
+  	<div class="landing-title">
+  		<h1>
+        <%= gettext("main title") %>
+  		</h1>
+  	</div>
 
-	<div class="landing-subtitle">
-		Create votes, invite to vote, participate in voting, discuss voting with other participants and share the results
-	</div>
+  	<div class="landing-subtitle">
+      <%= gettext("main subtitle") %>
+  	</div>
 
-	<div class="landing-btns">
-		<a href="#" class="btn bg-navy">create vote</a>
+  	<div class="landing-btns">
+  		<a href="#" class="btn bg-navy"><%= gettext("create vote") %></a>
 
-		<a href="#" class="btn bg-white">find vote</a>
-	</div>
+  		<a href="#" class="btn bg-white"><%= gettext("find vote") %></a>
+  	</div>
+  </div>
 </div>

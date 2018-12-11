@@ -7,6 +7,7 @@ defmodule VoteAndRateWeb.Router do
     plug :fetch_flash
     plug :protect_from_forgery
     plug :put_secure_browser_headers
+    plug VoteAndRateWeb.Locale, "en"
   end
 
   pipeline :api do
@@ -14,6 +15,12 @@ defmodule VoteAndRateWeb.Router do
   end
 
   scope "/", VoteAndRateWeb do
+    pipe_through :browser
+
+    get "/", PageController, :index
+  end
+
+  scope "/:locale", VoteAndRateWeb do
     pipe_through :browser
 
     get "/", PageController, :index
