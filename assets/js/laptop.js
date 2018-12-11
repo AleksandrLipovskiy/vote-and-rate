@@ -52,7 +52,6 @@ class Laptop {
 			await this.stepAnimation("four")
 			await this.pauseBetween()
 			await this.stepAnimation("five")
-			await this.pauseBetween()
 		}
 
 		votingAnimation().then(() => {
@@ -75,7 +74,7 @@ class Laptop {
   }
 
 	canselAnimationScreen() {
-		this.laptopScreen.classList.add(`animation-step-six`)
+		this.laptopScreen.classList.add("cansel-animation")
 	}
 }
 
