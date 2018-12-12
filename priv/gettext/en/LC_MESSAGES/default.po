@@ -41,12 +41,12 @@ msgstr "Create votes, invite to vote, participate in voting, discuss voting with
 #: lib/vote_and_rate_web/templates/layout/app.html.eex:12
 #: lib/vote_and_rate_web/templates/page/index.html.eex:67
 msgid "main title"
-msgstr "Free platform for online voting, rating and discussion"
+msgstr "Free platform for online voting, discussion and sharing of results"
 
 #, elixir-format
 #: lib/vote_and_rate_web/templates/layout/app.html.eex:7
 msgid "meta description"
-msgstr "Free platform for online voting, rating and discussion with the ability to share results"
+msgstr "Free platform for online voting, discussion and sharing of results"
 
 #, elixir-format
 #: lib/vote_and_rate_web/templates/layout/nav.html.eex:19

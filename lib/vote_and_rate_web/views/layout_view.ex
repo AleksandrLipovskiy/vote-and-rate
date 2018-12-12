@@ -1,18 +1,18 @@
 defmodule VoteAndRateWeb.LayoutView do
   use VoteAndRateWeb, :view
 
-  def locale do
+  def get_current_lang do
     Gettext.get_locale(VoteAndRateWeb.Gettext)
   end
 
   def link_selector_lang(conn, select_lang) do
-    Regex.replace(~r/#{locale()}/, conn.request_path, select_lang)
+    Regex.replace(~r/#{get_current_lang()}/, conn.request_path, select_lang)
   end
 
   def og_locales do
     VoteAndRateWeb.Gettext.supported_locales
     |> Enum.map(fn lang ->
-      current_lang = locale()
+      current_lang = get_current_lang()
 
       case lang do
         lang when lang == current_lang -> {"og:locale", lang}
@@ -23,7 +23,7 @@ defmodule VoteAndRateWeb.LayoutView do
 
   def language_annotations(conn) do
     VoteAndRateWeb.Gettext.supported_locales
-    |> Enum.reject(fn lang -> lang == locale() end)
+    |> Enum.reject(fn lang -> lang == get_current_lang() end)
     |> Enum.concat(["x-default"])
     |> Enum.map(fn lang ->
       case lang do
@@ -34,8 +34,7 @@ defmodule VoteAndRateWeb.LayoutView do
   end
 
   defp localized_url(conn, alt) do
-    # Replace current locale with alternative
-    path = ~r/\/#{locale()}(\/(?:[^?]+)?|$)/
+    path = ~r/\/#{get_current_lang()}(\/(?:[^?]+)?|$)/
     |> Regex.replace(conn.request_path, "#{alt}\\1")
 
     Phoenix.Router.Helpers.url(VoteAndRateWeb.Router, conn) <> path

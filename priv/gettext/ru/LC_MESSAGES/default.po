@@ -41,7 +41,7 @@ msgstr "Создавайте голосования, приглашайте уч
 #: lib/vote_and_rate_web/templates/layout/app.html.eex:12
 #: lib/vote_and_rate_web/templates/page/index.html.eex:67
 msgid "main title"
-msgstr "Бесплатная платформа для онлайн-голосования, оценки и обсуждения"
+msgstr "Бесплатная платформа для онлайн-голосования, обсуждения и публикации результатов"
 
 #, elixir-format
 #: lib/vote_and_rate_web/templates/layout/app.html.eex:7

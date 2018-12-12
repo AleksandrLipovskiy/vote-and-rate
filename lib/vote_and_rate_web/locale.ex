@@ -1,31 +1,21 @@
 defmodule VoteAndRateWeb.Locale do
   import Plug.Conn
 
+  @locales VoteAndRateWeb.Gettext.supported_locales
+
   def init(default), do: default
 
-  def call(conn, default) do
-    locale = conn.params["locale"]
-
-    if locale in VoteAndRateWeb.Gettext.supported_locales do
-      conn 
-      |> assign_locale!(locale)
-    else
-      path = localized_path(conn.request_path, default)
-
-      conn 
-      |> redirect_to(path)
-    end
+  def call(%Plug.Conn{params: %{"locale" => locale}} = conn, _default) when locale in @locales do
+    if(locale != Gettext.get_locale(VoteAndRateWeb.Gettext), do: Gettext.put_locale(locale))
+    assign(conn, :locale, locale)
   end
 
-  defp assign_locale!(conn, value) do
-    Gettext.put_locale(value)
+  def call(conn, default), do: redirect_with_default(conn, default)
 
+  defp redirect_with_default(conn, default) do
     conn
-    |> assign(:locale, value)
-  end
-
-  defp localized_path(path, locale) do
-    "/#{locale}#{path}"
+    |> assign(:locale, default)
+    |> redirect_to("/#{default}#{conn.request_path}")
   end
 
   defp redirect_to(conn, path) do

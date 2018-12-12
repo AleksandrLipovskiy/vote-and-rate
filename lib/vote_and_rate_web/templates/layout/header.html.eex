@@ -12,8 +12,8 @@
 		</div>
 
 		<div class="lang-selectors">
-			<a href="<%= link_selector_lang(@conn, "en") %>" class="en-<%= locale() %>">en</a>
-			<a href="<%= link_selector_lang(@conn, "ru") %>" class="ru-<%= locale() %>">ru</a>
+			<a href="<%= link_selector_lang(@conn, "en") %>" class="en-<%= @locale %>">en</a>
+			<a href="<%= link_selector_lang(@conn, "ru") %>" class="ru-<%= @locale %>">ru</a>
 		</div>
 
 		<div class="signup-in-links">

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="<%= locale() %>">
+<html lang="<%= @locale %>">
   <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -9,9 +9,9 @@
 
     <meta property="og:site_name" content="Vote and Rate"/>
     <meta property="og:url" content="https://vote-and-rate.online"/>
-    <meta property="og:title" content="<%= gettext("main title") %>">
-    <meta property="og:description" content="<%= gettext("main subtitle") %> %>">
-    <meta property="og:image" content="<%= Routes.static_path(@conn, "/images/vote-and-rate.png") %>" />
+    <meta property="og:title" content="<%= gettext("main title") %>"/>
+    <meta property="og:description" content="<%= gettext("main subtitle") %>"/>
+    <meta property="og:image" content="<%= Routes.static_path(@conn, "/images/vote-and-rate.png") %>"/>
     <meta property="og:type" content="website">
 
     <!-- Generate og:locale tags -->
@@ -24,7 +24,7 @@
       <%= Phoenix.HTML.Tag.tag(:link, rel: "alternate", hreflang: lang, href: path) %>
     <% end %>
 
-    <title>Vote and Rate · Free platform for online voting, rating and discussion</title>
+    <title>Vote and Rate · <%= gettext("main title") %></title>
 
     <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
   </head>
